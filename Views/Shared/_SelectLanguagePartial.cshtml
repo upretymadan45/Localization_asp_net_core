@@ -16,12 +16,12 @@
 
 <div class="row">
     <div class="col col-md-4 col-md-offset-8">
-        <div title="@Localizer["Request culture provider:"] @requestCulture?.Provider?.GetType().Name">  
+        <div>  
             <form id="selectLanguage" 
                 class="form-inline"
                 asp-controller="Home"
                 asp-action="SetLanguage" asp-route-returnUrl="@Context.Request.Path"
-                method="post" class="form-horizontal" role="form">
+                method="post">
                 <div class="form-group">
                     @Localizer["Language"] <select name="culture"
                                                 asp-for="@requestCulture.RequestCulture.UICulture.Name" 
